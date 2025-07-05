@@ -1,0 +1,22 @@
+pip install -r requirements.txt
+
+# running utils
+python -m utils.extract
+python -m utils.transform
+python -m utils.load
+
+# Running main (ETL)
+python main.py
+
+# Running unit tests
+pytest tests/extract_test.py
+pytest tests/test_load.py
+pytest tests/transform_test.py
+
+# Cek tests coverage
+pip install pytest-cov
+python -m pytest --cov=. --cov-report=term
+python -m pytest --cov=. --cov-report=html
+
+# url google sheet
+gsheet_url = "https://docs.google.com/spreadsheets/d/1Au2HhPP-k8XMw1fKr64IX5rEm0PM3VKVmlbT1Wl8ceY/edit?usp=sharing"
